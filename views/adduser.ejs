@@ -1,0 +1,47 @@
+
+ <%- include('layouts/header') %>
+    <div class="container px-5 my-5">
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <h1>Agregar Usuario</h1>
+
+            <form id="add-form" action="/add" method="post" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label class="form-label" for="name">Nombre</label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Ingresa nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" name="email" type="email" placeholder="Ingresa email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="phone">Teléfono</label>
+                    <input class="form-control" id="phone" name="phone" type="text" placeholder="Ingresa teléfono" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Foto</label>
+                    <input name="image" class="form-control" type="file" required>
+                </div>
+
+                <div class="d-grid">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Add User">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-md-3"></div>
+
+    </div>
+    </div>
+ 
+
+<%- include('layouts/footer') %>
+
+ 
