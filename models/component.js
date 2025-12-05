@@ -1,15 +1,14 @@
 const mongoose = require('mongoose')
-
-const userSchema = new mongoose.Schema({
+const componentSchema = new mongoose.Schema({
     name:{
         type: String,
         required: true
     },
-    email:{
+    descripcion:{
         type: String,
         required: true
     }, 
-    phone: {
+    codigo: {
         type: String,
         required: true
     },
@@ -17,13 +16,22 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    precio:{
+        type: Number,
+        required: true
+    },
+    cantidad:{
+        type: Number,
+        required: true
+    },
     created:{
         type: Date,
         required: true,
         default: Date.now
     }
+    
 })
 
-const User = mongoose.model('User', userSchema)
+const Component = mongoose.model('Component', componentSchema)
 
-module.exports = User
+module.exports = Component

@@ -29,6 +29,8 @@ app.use((req, res, next) => {
     next()
 })
 
+app.use(express.static('upload'))
+
 // consfigurar motor de plantillas
 app.set('view engine', 'ejs')
 
