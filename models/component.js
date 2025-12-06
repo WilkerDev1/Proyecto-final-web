@@ -1,37 +1,39 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 const componentSchema = new mongoose.Schema({
-    name:{
+    nombre: {
         type: String,
         required: true
     },
-    descripcion:{
-        type: String,
-        required: true
-    }, 
-    codigo: {
+    marca: { // Nuevo campo: Intel, AMD, Nvidia...
         type: String,
         required: true
     },
-    image:{
+    categoria: { // Nuevo campo: Procesador, Gráfica, etc.
         type: String,
         required: true
     },
-    precio:{
+    descripcion: {
+        type: String,
+        required: true
+    },
+    precio: {
         type: Number,
         required: true
     },
-    cantidad:{
+    stock: { // Usamos 'stock' en lugar de 'cantidad' por convención
         type: Number,
         required: true
     },
-    created:{
+    image: {
+        type: String,
+        required: true
+    },
+    created: {
         type: Date,
         required: true,
         default: Date.now
     }
-    
-})
+});
 
-const Component = mongoose.model('Component', componentSchema)
-
-module.exports = Component
+module.exports = mongoose.model('Component', componentSchema);
