@@ -5,11 +5,11 @@ const componentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    marca: { // Nuevo campo: Intel, AMD, Nvidia...
+    marca: { //campo: Intel, AMD, Nvidia...
         type: String,
         required: true
     },
-    categoria: { // Nuevo campo: Procesador, Gráfica, etc.
+    categoria: { //campo: Procesador, Gráfica, etc.
         type: String,
         required: true
     },
@@ -21,7 +21,7 @@ const componentSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    stock: { // Usamos 'stock' en lugar de 'cantidad' por convención
+    stock: { // Usamos 'stock' en lugar de 'cantidad'
         type: Number,
         required: true
     },
